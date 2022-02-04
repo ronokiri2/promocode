@@ -17,8 +17,7 @@ const tl = gsap.timeline({
 	//   end: vh(200) + ' top',
 	  end: "+=100%",
 	  scrub: true,
-	  pin: true,
-	  markers: true
+	  pin: true
 	}
   });
 
