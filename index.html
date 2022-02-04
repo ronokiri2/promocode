@@ -276,9 +276,17 @@
 	</header>
 
 	<main>
-		<video autoplay muted loop>
-			<source src="media/videoplayback.mp4" type="video/mp4">
-		</video>
+		<!-- Контейнер для видео нужен, потому что на смартфонах не будет видео.
+			 Но даже используя медиа запрос с display:none на теге video,
+			 браузер все равно начнет загружать видео.
+			 Чтобы браузер не загружал видео, нужно поставить медиа-запрос
+			 на родителя video. Поэтому тут есть контейнер для видео. -->
+		<div class="video-container">
+			<video autoplay muted loop>
+				<source src="media/videoplayback.mp4" type="video/mp4">
+			</video>
+		</div>
+		
 
 		<img class="main__logo" src="media/KIONLOGO.svg">
 		<p>Введите промокод и активируйте подписку на ТВ, фильмы и сериалы!</p>
