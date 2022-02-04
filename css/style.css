@@ -2,8 +2,6 @@ body {
 	background-color: black;
 	background: linear-gradient(55.96deg, #3A338A 21.39%, #C42F72 100%);
 	font-family: system-ui, sans-serif;
-	height: 100vh;
-	overflow: hidden;
 }
 
 header {
@@ -29,7 +27,7 @@ header a {
 
 main {
 	position: relative;
-	margin: 0 auto;
+	margin: 0 auto 7.2463768vh auto; /* 135px */
 	width: 89.453125vw;
 	height: 85.507246376811594vh; /* 1593px */
 	background-color: transparent;
@@ -60,7 +58,7 @@ video {
 	z-index: 1;
 }
 
-p {
+.main__text {
 	font-weight: bold;
 	font-size: 3.25520833vw; /* 3.25520833vw 100px */ 
 	width: 61.2304688vw; /* 1354px */ 
@@ -118,4 +116,37 @@ button {
 	font-size: 1.30208333vw; /* 40px */
 	border-radius: 0.325520833vw; /* 10px */
 	color: white;
+}
+
+
+
+
+
+
+
+
+
+.s2 {
+	height: 30vh;
+	background-color: black;
+}
+
+.s3 {
+	height: 150vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: black;
+}
+
+.s3__logo {
+	width: 26.6276042vw;
+}
+
+.s3__text {
+	font-size: 1.62760417vw;
+	width: 71.3541667vw;
+	text-align: center;
+	margin-top: 20px;
 }
