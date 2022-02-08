@@ -96,6 +96,19 @@ form {
 	margin-top: 8.10546875vw;
 } */
 
+/* скрытие лейбла у инпута. но скринридер сможет его прочитать */
+.sr-only {
+	position: absolute;
+  
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	border: 0;
+	overflow: hidden;
+  
+	white-space: nowrap;
+  }
+
 input {
 	width: 44.0755208vw; /* 1354px */
 	height: 3.90625vw; /* 120px */

@@ -9,6 +9,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
+
+<!-- проставить ширину и высоту в картинки
+	добавить  decoding="async" картинкам -->
 <body style="background-color:black; font-family: system-ui, sans-serif;">
 
 	<div class="preloader">
@@ -285,7 +288,8 @@
 		<img class="main__arrow" src="media/arrow.svg">
 
 		<form action="" method="get">
-			<input type="text" name="promocode" placeholder="Промокод" autofocus autocomplete="off" required>
+			<label for="promocode" class="sr-only">Введите промокод в это поле</label>
+			<input type="text" name="promocode" id="promocode" placeholder="Промокод" autofocus autocomplete="off" required>
 			<button type="submit">Активировать промокод</button>
 		</form>
 	</main>
