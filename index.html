@@ -5,14 +5,14 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Промокод KION</title>
-	<link rel="stylesheet" href="css/reset.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="minified/reset.min.css">
+	<link rel="stylesheet" href="minified/style.min.css">
 </head>
 
 
 <!-- проставить ширину и высоту в картинки
 	добавить  decoding="async" картинкам -->
-<body style="background-color:black; font-family: system-ui, sans-serif;">
+<body>
 
 	<div class="preloader">
 		<svg width="210" height="52" viewBox="0 0 210 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -262,28 +262,17 @@
 
 
 
-	<header>
+	<!-- <header>
 		<a href="#">KION Originals</a>
 		<a href="#">Промокод</a>
 		<a class="header__logo" href="#"><img decoding="async" src="media/kion.svg"></a>
 		<a href="#">Подписки</a>
 		<a href="#">Поддержка</a>
-	</header>
+	</header> -->
 
 	<main>
-		<!-- Контейнер для видео нужен, потому что на смартфонах не будет видео.
-			 Но даже используя медиа запрос с display:none на теге video,
-			 браузер все равно начнет загружать видео.
-			 Чтобы браузер не загружал видео, нужно поставить медиа-запрос
-			 на родителя video. Поэтому тут есть контейнер для видео. -->
-		<div class="video-container">
-			<video autoplay muted loop>
-				<source src="media/videoplayback.mp4" type="video/mp4">
-			</video>
-		</div>
-		
 
-		<img class="main__logo" decoding="async" src="media/KIONLOGO.svg">
+		<!-- <img class="main__logo" decoding="async" src="media/KIONLOGO.svg">
 		<p class="main__text">Введите промокод и активируйте подписку на ТВ, фильмы и сериалы!</p>
 		<img class="main__arrow" src="media/arrow.svg">
 
@@ -291,22 +280,34 @@
 			<label for="promocode" class="sr-only">Введите промокод в это поле</label>
 			<input type="text" name="promocode" id="promocode" placeholder="Промокод" autofocus autocomplete="off" required>
 			<button type="submit">Активировать промокод</button>
+		</form> -->
+
+
+		<form>
+  
+			<div class="segment">
+				<h1>Введите промокод и активируйте подписку на ТВ, фильмы и сериалы!</h1>
+			</div>
+			
+			<label>
+				<input type="text" placeholder="Промокод"/>
+			</label>
+
+			<label>
+				<input type="tel" placeholder="Номер телефона"/>
+			</label>
+
+			<button class="red" type="button">Активировать промокод</button>
+			
+			<div class="segment">
+			  <button class="unit" type="button"></button>
+			  <button class="unit" type="button"></button>
+			  <button class="unit" type="button"></button>
+			</div>
+
 		</form>
 	</main>
 
-	<section class="s2">
-		<img class="s2__svg" decoding="async" src="media/SVGPerehod.svg">
-	</section>
-
-	<section class="s3">
-		<img class="s3__logo" decoding="async" src="media/s3__logo.png">
-		<p class="s3__text">KION — это онлайн-кинотеатр, который вы полюбите. В KION можно смотреть фильмы и сериалы лучших российских и зарубежных студий.</p>
-	</section>
-
 	<script type="text/javascript" src="js/preloader.js"></script>
-	<script type="text/javascript" src="js/gsap.min.js"></script>
-	<script type="text/javascript" src="js/animation.js"></script>
-	<script type="text/javascript" src="js/ScrollTrigger.min.js"></script>
-	<script type="text/javascript" src="js/scrollAnimation.js"></script>
 </body>
 </html>
