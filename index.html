@@ -34,25 +34,21 @@
 
 
 		<form>
-  
-			<div class="segment">
-				<h1>Введите промокод и активируйте подписку на ТВ, фильмы и сериалы!</h1>
-			</div>
+			<h1>Введите промокод и активируйте подписку на ТВ, фильмы и сериалы!</h1>
 			
-			<label>
-				<input type="text" placeholder="Промокод"/>
-			</label>
+			<label for="promocode">Промокод:</label>
+			<input type="text" id="promocode" name="promocode" placeholder="Промокод" autocomplete="off" required/>
 
-			<label>
-				<input type="tel" placeholder="Номер телефона"/>
-			</label>
-
-			<button class="red" type="button">Активировать промокод</button>
+			<label for="phonenumber">Номер телефона:</label>
+			<input type="tel" id="phonenumber" name="phonenumber" placeholder="Номер телефона"/>
 			
-			<div class="segment">
-			  <button class="unit" type="button"></button>
-			  <button class="unit" type="button"></button>
-			  <button class="unit" type="button"></button>
+
+			<button class="big-button" type="submit">Активировать промокод</button>
+			
+			<div class="bottom-buttons">
+			  <button class="bottom-button" type="button"></button>
+			  <button class="bottom-button" type="button"></button>
+			  <button class="bottom-button" type="button"></button>
 			</div>
 
 		</form>
