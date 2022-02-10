@@ -6,6 +6,7 @@ $color-white: #FFF;
 body {
 	background-color:$color-bg;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
@@ -15,6 +16,11 @@ body {
 form {
 	padding: 16px;
 	width: 320px;
+}
+
+.logo {
+	width: 480px;
+	margin-bottom: 50px ;
 }
 
 h1{
@@ -43,6 +49,7 @@ input {
 	border-radius: 320px;
 	padding: 16px;
 	letter-spacing: -0.2px;
+	color: $color-shadow;
 	background-color:$color-bg;
 	text-shadow: 1px 1px 0 $color-white;
 	box-shadow:  inset 2px 2px 5px $color-shadow, inset -5px -5px 10px $color-white;
@@ -51,6 +58,9 @@ input {
 	appearance: none;
 	margin-bottom: 25px;
 
+	&::placeholder {
+		text-shadow: 1px 1px 0 $color-white;
+	}
 	&:focus {
 		box-shadow:  inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
 	}
