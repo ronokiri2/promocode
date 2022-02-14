@@ -1,3 +1,4 @@
 {
-	"editor.fontFamily": "JetBrains Mono, Monaco, 'Courier New', monospace"
+	"editor.fontFamily": "JetBrains Mono, Monaco,  monospace",
+	"editor.fontLigatures": true,
 }
