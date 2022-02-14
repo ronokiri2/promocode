@@ -132,7 +132,7 @@ function hexToDarkenHSL(H) {
 	  p.style.color = event.target.value;
 	});
   }
-
+  
 // меняет перменную, но с лагами
 // function updateFirst(event) {
 // 	getComputedStyle(document.documentElement)
