@@ -144,13 +144,29 @@ function updateFirst(event) {
 }
 
 //функция добавления класса transition после окончательного выбора цвета в color-input
+// function updateAll(event) {
+// 	for (let i = 0; i < input.length; i++) {
+// 		input[i].classList.add('transition')
+// 	}
+// 	bigButton.classList.add("transition");
+// 	colorInput.classList.add("transition");
+// 	for (let i = 0; i < bottomButton.length; i++) {
+// 		bottomButton[i].classList.add('transition')
+// 	}
+// }
+//функция добавления класса transition после окончательного выбора цвета в color-input
 function updateAll(event) {
-	for (let i = 0; i < input.length; i++) {
-		input[i].classList.add('transition')
-	}
-	bigButton.classList.add("transition");
-	colorInput.classList.add("transition");
-	for (let i = 0; i < bottomButton.length; i++) {
-		bottomButton[i].classList.add('transition')
-	}
+	
+	setTimeout(
+		function updateAll(event){ 
+			for (let i = 0; i < input.length; i++) {
+			input[i].classList.add('transition')
+			}
+			bigButton.classList.add("transition");
+			colorInput.classList.add("transition");
+			for (let i = 0; i < bottomButton.length; i++) {
+				bottomButton[i].classList.add('transition')
+			}
+		},200);
 }
+// setTimeout(function(){ document.getElementById("mark").innerHTML=i;},2000);
