@@ -1,5 +1,5 @@
 // todo адаптировать форму под разрешения ниже 320 пикселей
-// сделать замену красного цвета если лайтнесс ниже 50%
+// сделать замену красного цвета если лайтнесс ниже 50% +
 // обратно добавить анимацию, но при смене цвета убрать анимацию
 // добавить кнопку со сменой темы
 // добавить prefered color scheme
@@ -17,6 +17,7 @@
 
 	--white: #FFF;
 	--white2: hsl(var(--bg-hs), calc(var(--bg-l) + 7%));
+	
 }
 
 body {
@@ -177,30 +178,34 @@ h1, label {
 	// &:focus-visible {
 	// 	outline: 4px solid var(--red);
 	// }
-
-  }
-
-
-
-  
-  ::-webkit-color-swatch-wrapper {
-	padding: 0;
-  }
-
-  ::-webkit-color-swatch{
-	border: 0;
-	border-radius: 8px;
-  }
-  ::-webkit-color-swatch:active{
-	border-radius: 8px; 
-	 box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
 }
 
-  ::-moz-color-swatch,
-  ::-moz-focus-inner{
-	border: 0;
-  }
-  
-  ::-moz-focus-inner{
-	padding: 0;
-  }
+
+
+	
+	::-webkit-color-swatch-wrapper {
+		padding: 0;
+	}
+
+	::-webkit-color-swatch{
+		border: 0;
+		border-radius: 8px;
+	}
+	::-webkit-color-swatch:active{
+		border-radius: 8px; 
+		box-shadow: inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+	}
+
+	::-moz-color-swatch,
+	::-moz-focus-inner{
+		border: 0;
+	}
+	
+	::-moz-focus-inner{
+		padding: 0;
+	}
+
+	.transition {
+		transition: all 0.2s ease-in-out;
+	}
+

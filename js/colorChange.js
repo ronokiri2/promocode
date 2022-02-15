@@ -1,15 +1,21 @@
 let colorWell;
-const defaultColor = "#EBECF0";
-const input   = document.querySelector(".input");
+const defaultColor 	= "#EBECF0";
+const input   		= document.querySelectorAll(".input");
+const bigButton 	= document.querySelector(".big-button");
+const bottomButton 	= document.querySelectorAll(".bottom-button");
+const colorInput 	= document.querySelector(".color-input");
+
 window.addEventListener("load", startup, false);
 
 function startup() {
 	colorWell = document.querySelector(".color-input");
 	colorWell.value = defaultColor;
 	colorWell.addEventListener("input", updateFirst, false);
+	colorWell.addEventListener("change", updateAll, false);
 	colorWell.select();
   }
 
+// функция затемнения цвета
 function hexToDarkenHSL(H) {
 	// Convert hex to RGB first
 	let r = 0, g = 0, b = 0;
@@ -56,7 +62,7 @@ function hexToDarkenHSL(H) {
   }
 
 
-
+// функция осветления цвета
   function hexToLighterHSL(H) {
 	// Convert hex to RGB first
 	let r = 0, g = 0, b = 0;
@@ -102,8 +108,9 @@ function hexToDarkenHSL(H) {
 	return "hsl(" + h + "," + s + "%," + l + "%)";
   }
 
+
+
   function updateFirst(event) {
-	const input   = document.querySelector(".input");
 	let shadow 	  = hexToDarkenHSL(event.target.value);
 	let highlight = hexToLighterHSL(event.target.value);
 
@@ -111,11 +118,35 @@ function hexToDarkenHSL(H) {
 	.getPropertyValue('--bg');
 
 	if (input) {
+		//смена содержимого css переменных для смены цвета
 	   document.documentElement.style
 	   .setProperty('--bg', event.target.value);
 	   document.documentElement.style
 	   .setProperty('--shadow', shadow);
 	   document.documentElement.style
 	   .setProperty('--white', highlight);
+
+
+	   //удаление класса transition во время смены цвета в color-input
+	   for (let i = 0; i < input.length; i++) {
+		input[i].classList.remove('transition')
+	  }
+	   bigButton.classList.remove("transition");
+	   colorInput.classList.remove("transition");
+	   for (let i = 0; i < bottomButton.length; i++) {
+		bottomButton[i].classList.remove('transition')
+	  	}
 	}
+  }
+
+//функция добавления класса transition после окончательного выбора цвета в color-input
+  function updateAll(event) {
+	for (let i = 0; i < input.length; i++) {
+		input[i].classList.add('transition')
+	  }
+	   bigButton.classList.add("transition");
+	   colorInput.classList.add("transition");
+	   for (let i = 0; i < bottomButton.length; i++) {
+		bottomButton[i].classList.add('transition')
+	  	}
   }
