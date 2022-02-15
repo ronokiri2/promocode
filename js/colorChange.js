@@ -98,18 +98,17 @@ function hexToDarkenHSL(H) {
 	s = delta == 0 ? 0 : delta / (1 - Math.abs(2 * l - 1));
 	s = +(s * 100).toFixed(1);
 	l = +(l * 100 + 7).toFixed(1);
-  
+
 	return "hsl(" + h + "," + s + "%," + l + "%)";
   }
 
   function updateFirst(event) {
-	const input 	  = document.querySelector(".input");
-	let shadow = hexToDarkenHSL(event.target.value);
+	const input   = document.querySelector(".input");
+	let shadow 	  = hexToDarkenHSL(event.target.value);
 	let highlight = hexToLighterHSL(event.target.value);
 
 	getComputedStyle(document.documentElement)
 	.getPropertyValue('--bg');
-
 
 	if (input) {
 	   document.documentElement.style

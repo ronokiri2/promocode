@@ -1,3 +1,10 @@
+// todo адаптировать форму под разрешения ниже 320 пикселей
+// сделать замену красного цвета если лайтнесс ниже 50%
+// обратно добавить анимацию, но при смене цвета убрать анимацию
+// добавить кнопку со сменой темы
+// добавить prefered color scheme
+// добавить кнопку смены шрифта
+
 :root {
 	--red: #AE1100;
 	--bg: #EBECF0;
@@ -87,7 +94,7 @@ h1, label {
 	font-weight: 600;
 	text-align: center;
     width: 100%;
-    color: var(--red);
+    color: var(--shadow);
 	user-select: none;
 	-webkit-tap-highlight-color: transparent;
 
