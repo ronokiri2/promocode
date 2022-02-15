@@ -1,11 +1,12 @@
-var colorWell;
+let colorWell;
+const defaultColor = "#EBECF0";
 const input   = document.querySelector(".input");
 window.addEventListener("load", startup, false);
 
 function startup() {
 	colorWell = document.querySelector(".color-input");
+	colorWell.value = defaultColor;
 	colorWell.addEventListener("input", updateFirst, false);
-	colorWell.addEventListener("change", updateAll, false);
 	colorWell.select();
   }
 
@@ -111,12 +112,6 @@ function hexToDarkenHSL(H) {
 
 
 	if (input) {
-	//   p.style.color 			  = event.target.value;
-	//   input.style.backgroundColor = event.target.value;
-	//   input.style.boxShadow 	  = 
-	//    `inset 2px 2px 5px ${shadow}, inset -5px -5px 10px ${highlight}`;
-	
-
 	   document.documentElement.style
 	   .setProperty('--bg', event.target.value);
 	   document.documentElement.style
@@ -125,20 +120,3 @@ function hexToDarkenHSL(H) {
 	   .setProperty('--white', highlight);
 	}
   }
-
-
-  function updateAll(event) {
-	document.querySelectorAll("p").forEach(function(p) {
-	  p.style.color = event.target.value;
-	});
-  }
-  
-// меняет перменную, но с лагами
-// function updateFirst(event) {
-// 	getComputedStyle(document.documentElement)
-//     .getPropertyValue('--bg');
-
-// 	document.documentElement.style
-//     .setProperty('--bg', event.target.value);
-//   }
-  
