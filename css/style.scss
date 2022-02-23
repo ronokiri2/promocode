@@ -74,6 +74,7 @@ h1, label {
 	// transition: all 0.2s ease-in-out;
 	appearance: none;
 	margin-bottom: 25px;
+	border: none;
 
 	&::placeholder {
 		color: var(--shadow);
@@ -124,6 +125,7 @@ h1, label {
 }
 .bottom-button {
 	// color:#61677C;
+	background-color: var(--bg);
 	border: 0;
 	border-radius: 8px;
     width: 48px;
