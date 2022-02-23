@@ -82,6 +82,7 @@ h1, label {
 	}
 	&:focus {
 		box-shadow:  inset 1px 1px 2px var(--shadow), inset -1px -1px 2px var(--white);
+		outline: none;
 	}
 }
 
